@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "author": "George Bockari <bitwhys@gmail.com>",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format:watch": "onchange '**/*.{js,json,html,css,scss}' -- prettier --write {{changed}}"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.2.0",
+    "lerna": "^3.22.1",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
