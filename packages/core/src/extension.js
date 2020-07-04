@@ -4,12 +4,10 @@ import {
   TextInput,
   Form,
   FormGroup,
-  SelectItem,
   Slider,
-  Select,
-  TextArea,
   Button,
   Toggle,
+  ComboBox,
 } from 'carbon-components-react'
 import { Tile } from 'carbon-components-react/lib'
 
@@ -20,12 +18,16 @@ const saveToYouTube = () => {
   console.log('Saving playlist to your YouTube account...')
 }
 
+const noop = evt => {
+  evt.preventDefault()
+}
+
 const Extension = props => {
   return (
     // Start with the wrapper component (Tabs)
     <Tile className="stbfy--popup__title">
       <div className="title">SpoTubefy</div>
-      <Form>
+      <Form onSubmit={noop}>
         <FormGroup legendText="">
           <TextInput
             helperText={helperText}
@@ -35,28 +37,53 @@ const Extension = props => {
             placeholder="Enter playlist URI...."
           />
         </FormGroup>
+
         <FormGroup legendText="">
-          <Toggle
-            size="small"
-            aria-label="toggle button"
-            id="toggle-1"
-            labelText="Save to YouTube"
-            labelA="No"
-            labelB="Yes"
-            onToggle={saveToYouTube}
+          <ComboBox
+            ariaLabel="Choose an item"
+            direction="bottom"
+            disabled={false}
+            helperText="Optional helper text here"
+            id="carbon-combobox-example"
+            invalidText="A valid value is required"
+            itemToElement={null}
+            itemToString={function noRefCheck() {}}
+            items={[
+              {
+                id: 'option-0',
+                text:
+                  'An example option that is really long to show what should be done to handle long text',
+              },
+              {
+                id: 'option-1',
+                text: 'Option 1',
+              },
+              {
+                id: 'option-2',
+                text: 'Option 2',
+              },
+              {
+                id: 'option-3',
+                selected: true,
+                text: 'Option 3',
+              },
+              {
+                id: 'option-4',
+                text: 'Option 4',
+              },
+              {
+                id: 'option-5',
+                text: 'Option 5',
+              },
+            ]}
+            light={false}
+            onChange={function noRefCheck() {}}
+            placeholder="Filter..."
+            shouldFilterItem={function noRefCheck() {}}
+            size={undefined}
+            titleText="Combobox title"
+            type="default"
           />
-        </FormGroup>
-        <FormGroup legendText="">
-          <Select
-            defaultValue="placeholder-item"
-            id="select-1"
-            invalidText="This is an invalid error message."
-            labelText="Choose Playlist"
-          >
-            <SelectItem text="Playlist #1" value="option-1" />
-            <SelectItem text="Playlist #3" value="option-2" />
-            <SelectItem text="Playlist #5" value="option-3" />
-          </Select>
         </FormGroup>
         <FormGroup legendText="">
           <Slider
@@ -77,6 +104,17 @@ const Extension = props => {
             step={1}
             stepMultiplier={5}
             value={50}
+          />
+        </FormGroup>
+        <FormGroup legendText="">
+          <Toggle
+            size="small"
+            aria-label="toggle button"
+            id="toggle-1"
+            labelText="Save to YouTube"
+            labelA="No"
+            labelB="Yes"
+            onToggle={saveToYouTube}
           />
         </FormGroup>
         <Button kind="primary" tabIndex={0} type="submit">
