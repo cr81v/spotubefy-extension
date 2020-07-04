@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './tailwind.base.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
+import './styles/index.scss'
+import Extension from './extension'
+import * as serviceWorker from './workers/serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Extension />
   </React.StrictMode>,
   document.getElementById('root'),
 )
