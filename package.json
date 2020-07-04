@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "format:watch": "onchange '**/*.{js,json,html,css,scss}' -- prettier --write {{changed}}"
+    "format:watch": "onchange '**/*.{js,json,html,css,scss}' -- prettier --write {{changed}}",
+    "build": "yarn workspace core build"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.2.0",
