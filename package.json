@@ -7,7 +7,10 @@
   ],
   "scripts": {
     "format:watch": "onchange '**/*.{js,json,html,css,scss}' -- prettier --write {{changed}}",
-    "build": "yarn workspace core build"
+    "build": "yarn workspace core build",
+    "version:patch": "yarn workspace core version --patch",
+    "version:minor": "yarn workspace core version --minor",
+    "version:major": "yarn workspace core version --major"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.2.0",
