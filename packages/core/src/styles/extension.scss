@@ -1,0 +1,8 @@
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+@import '~carbon-components/scss/globals/scss/typography.scss';
+@import '~carbon-components/scss/globals/scss/vars.scss';
+
+.stbfy--popup__title {
+  @include carbon--type-style('productive-heading-02');
+  max-width: 400px;
+}
