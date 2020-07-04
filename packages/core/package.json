@@ -1,6 +1,6 @@
 {
   "name": "core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "@carbon/icons-react": "10.3.0",
