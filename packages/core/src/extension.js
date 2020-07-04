@@ -25,7 +25,7 @@ const noop = evt => {
 const Extension = props => {
   return (
     // Start with the wrapper component (Tabs)
-    <Tile className="stbfy--popup__title">
+    <Tile className="stbfy--popup__tile">
       <div className="title">SpoTubefy</div>
       <Form onSubmit={noop}>
         <FormGroup legendText="">
@@ -33,87 +33,97 @@ const Extension = props => {
             helperText={helperText}
             id="test2"
             invalidText="Invalid error message."
-            labelText="Playlist URI"
+            labelText="YouTube Playlist URI"
             placeholder="Enter playlist URI...."
           />
         </FormGroup>
 
         <FormGroup legendText="">
-          <ComboBox
-            ariaLabel="Choose an item"
-            direction="bottom"
-            disabled={false}
-            helperText="Optional helper text here"
-            id="carbon-combobox-example"
-            invalidText="A valid value is required"
-            itemToElement={null}
-            itemToString={function noRefCheck() {}}
-            items={[
-              {
-                id: 'option-0',
-                text:
-                  'An example option that is really long to show what should be done to handle long text',
-              },
-              {
-                id: 'option-1',
-                text: 'Option 1',
-              },
-              {
-                id: 'option-2',
-                text: 'Option 2',
-              },
-              {
-                id: 'option-3',
-                selected: true,
-                text: 'Option 3',
-              },
-              {
-                id: 'option-4',
-                text: 'Option 4',
-              },
-              {
-                id: 'option-5',
-                text: 'Option 5',
-              },
-            ]}
-            light={false}
-            onChange={function noRefCheck() {}}
-            placeholder="Filter..."
-            shouldFilterItem={function noRefCheck() {}}
-            size={undefined}
-            titleText="Combobox title"
-            type="default"
+          <TextInput
+            id="test2"
+            invalidText="Invalid error message."
+            labelText="Spotify Playlist Name"
+            placeholder="New Playlist Title..."
           />
         </FormGroup>
-        <FormGroup legendText="">
-          <Slider
-            ariaLabelInput="Label for slider value"
-            disabled={false}
-            hideTextInput={false}
-            id="slider"
-            inputType="number"
-            labelText="Covariance"
-            light={false}
-            max={100}
-            maxLabel=""
-            min={0}
-            minLabel=""
-            name=""
-            onChange={function noRefCheck() {}}
-            onRelease={function noRefCheck() {}}
-            step={1}
-            stepMultiplier={5}
-            value={50}
-          />
-        </FormGroup>
+
+        {/*<FormGroup legendText="">*/}
+        {/*  <ComboBox*/}
+        {/*    ariaLabel="Choose an item"*/}
+        {/*    direction="bottom"*/}
+        {/*    disabled={false}*/}
+        {/*    helperText="Optional helper text here"*/}
+        {/*    id="carbon-combobox-example"*/}
+        {/*    invalidText="A valid value is required"*/}
+        {/*    itemToElement={null}*/}
+        {/*    itemToString={function noRefCheck() {}}*/}
+        {/*    items={[*/}
+        {/*      {*/}
+        {/*        id: 'option-0',*/}
+        {/*        text:*/}
+        {/*          'An example option that is really long to show what should be done to handle long text',*/}
+        {/*      },*/}
+        {/*      {*/}
+        {/*        id: 'option-1',*/}
+        {/*        text: 'Option 1',*/}
+        {/*      },*/}
+        {/*      {*/}
+        {/*        id: 'option-2',*/}
+        {/*        text: 'Option 2',*/}
+        {/*      },*/}
+        {/*      {*/}
+        {/*        id: 'option-3',*/}
+        {/*        selected: true,*/}
+        {/*        text: 'Option 3',*/}
+        {/*      },*/}
+        {/*      {*/}
+        {/*        id: 'option-4',*/}
+        {/*        text: 'Option 4',*/}
+        {/*      },*/}
+        {/*      {*/}
+        {/*        id: 'option-5',*/}
+        {/*        text: 'Option 5',*/}
+        {/*      },*/}
+        {/*    ]}*/}
+        {/*    light={false}*/}
+        {/*    onChange={function noRefCheck() {}}*/}
+        {/*    placeholder="Filter..."*/}
+        {/*    shouldFilterItem={function noRefCheck() {}}*/}
+        {/*    size={undefined}*/}
+        {/*    titleText="Combobox title"*/}
+        {/*    type="default"*/}
+        {/*  />*/}
+        {/*</FormGroup>*/}
+
+        {/*<FormGroup legendText="">*/}
+        {/*  <Slider*/}
+        {/*    ariaLabelInput="Label for slider value"*/}
+        {/*    disabled={false}*/}
+        {/*    hideTextInput={true}*/}
+        {/*    id="slider"*/}
+        {/*    inputType="number"*/}
+        {/*    labelText="Covariance"*/}
+        {/*    light={false}*/}
+        {/*    max={100}*/}
+        {/*    maxLabel=""*/}
+        {/*    min={0}*/}
+        {/*    minLabel=""*/}
+        {/*    name=""*/}
+        {/*    onChange={function noRefCheck() {}}*/}
+        {/*    onRelease={function noRefCheck() {}}*/}
+        {/*    step={1}*/}
+        {/*    stepMultiplier={5}*/}
+        {/*    value={50}*/}
+        {/*  />*/}
+        {/*</FormGroup>*/}
         <FormGroup legendText="">
           <Toggle
-            size="small"
             aria-label="toggle button"
             id="toggle-1"
             labelText="Save to YouTube"
             labelA="No"
             labelB="Yes"
+            disabled
             onToggle={saveToYouTube}
           />
         </FormGroup>

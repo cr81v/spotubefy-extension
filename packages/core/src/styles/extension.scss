@@ -1,8 +1,15 @@
-@import '~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
 @import '~carbon-components/scss/globals/scss/typography.scss';
-@import '~carbon-components/scss/globals/scss/vars.scss';
+//@import '~carbon-components/scss/globals/scss/vars.scss';
 
-.stbfy--popup__title {
-  @include carbon--type-style('productive-heading-02');
+.stbfy--popup__tile {
   max-width: 300px;
+  background: $carbon--black-100;
+  .title {
+    padding: $spacing-05 0;
+    @include carbon--type-style('productive-heading-03');
+  }
+}
+
+.stbfy--input__wrapper {
+  max-width: 100px;
 }

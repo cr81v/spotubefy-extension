@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "SpoTubefy",
   "description": "Your YouTube playlist, Spotified. This extension adds the ability to save ques as playlist. But more importantly, SpoTubefy allows you to harness the best-in-class music discovery algorithms of Spotify by using any YouTube playlist as a seed.",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "browser_action": {
     "default_title": "SpoTubefy",
     "default_popup": "index.html"
