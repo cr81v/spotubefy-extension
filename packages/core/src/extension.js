@@ -1,43 +1,33 @@
 import React from 'react'
-import { Accordion, AccordionItem } from 'carbon-components-react'
-import { Title } from 'carbon-components-react/lib'
+import classNames from 'classnames'
+import {
+  Accordion,
+  AccordionItem,
+  ModalWrapper,
+  Tabs,
+  Tab,
+  CodeSnippet,
+  TextInput,
+} from 'carbon-components-react'
+import { Tile } from 'carbon-components-react/lib'
 
 import './styles/extension.scss'
 
 const Extension = props => {
   return (
-    <div>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React, with Carbon!</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-      <article className="App__demo">
-        <h3 className="App__demo-title">Carbon Components</h3>
-        <Accordion>
-          <AccordionItem title="Example">
-            <p>
-              This is a Component imported from Carbon and styled with the CSS
-              from the main Carbon Components GitHub repo!
-            </p>
-          </AccordionItem>
-          <AccordionItem title="Questions?">
-            <p>
-              Hi there!{' '}
-              <span aria-label="Hand wave" role="img">
-                👋{' '}
-              </span>{' '}
-              if you have any questions about this demo, or are running into any
-              issues setting this up in your own development environment, please
-              feel free to reach out to us on Slack or make an issue on the
-              GitHub Repository.
-            </p>
-          </AccordionItem>
-        </Accordion>
-      </article>
+    // Start with the wrapper component (Tabs)
+    <div style={{ width: '50%' }}>
+      <Tabs type="container">
+        <Tab href="#" id="tab-1" label="Tab label 1">
+          <div className="some-content">Content for first tab goes here.</div>
+        </Tab>
+        <Tab href="#" id="tab-2" label="Tab label 2">
+          <div className="some-content">Content for second tab goes here.</div>
+        </Tab>
+        <Tab href="#" id="tab-3" label="Tab label 3">
+          <div className="some-content">Content for third tab goes here.</div>
+        </Tab>
+      </Tabs>
     </div>
   )
 }
