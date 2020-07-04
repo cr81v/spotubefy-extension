@@ -2,11 +2,21 @@
 //@import '~carbon-components/scss/globals/scss/vars.scss';
 
 .stbfy--popup__tile {
+  min-width: 250px;
   max-width: 300px;
   background: $carbon--black-100;
-  .title {
+  .header {
     padding: $spacing-05 0;
-    @include carbon--type-style('productive-heading-03');
+    &__title {
+      @include carbon--type-style('productive-heading-04');
+      .tube {
+        color: $carbon--red-60;
+      }
+    }
+    &__meta {
+      margin: $spacing-02 0;
+      @include carbon--type-style('helper-text-01');
+    }
   }
 }
 

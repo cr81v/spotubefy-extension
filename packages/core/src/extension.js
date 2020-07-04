@@ -26,11 +26,15 @@ const Extension = props => {
   return (
     // Start with the wrapper component (Tabs)
     <Tile className="stbfy--popup__tile">
-      <div className="title">SpoTubefy</div>
+      <header className="header">
+        <div className="header__title">
+          Spo<span className="tube">Tube</span>fy
+        </div>
+        <p className="header__meta">{helperText}</p>
+      </header>
       <Form onSubmit={noop}>
         <FormGroup legendText="">
           <TextInput
-            helperText={helperText}
             id="test2"
             invalidText="Invalid error message."
             labelText="YouTube Playlist URI"
